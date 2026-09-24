@@ -371,3 +371,7 @@ button,a,input,textarea,select{-webkit-tap-highlight-color:transparent}
   .service-ribbon-inner{animation:none}
   .motion-ready [data-reveal]{opacity:1;transform:none}
 }
+
+/* Final 320–430px layout QA: footer controls must not exceed the viewport. */
+@media(max-width:620px){.footer-main{align-items:flex-start;flex-direction:column;gap:22px}.footer-up{align-self:flex-end}.footer-wordmark{max-width:100%;overflow-wrap:anywhere}}
+@media(max-width:380px){.hero-line{white-space:normal}.hero h1{font-size:clamp(40px,10.2vw,48px)}}

@@ -260,3 +260,40 @@ body{font-size:16px;line-height:1.65;color:var(--text);background:var(--bg);-web
 @media (prefers-reduced-motion: reduce) {
   .site-nav { transition: none; }
 }
+
+
+/* Locally hosted reference photographs: never represent these as the
+   installation work of Polbudandsonltd. Attribution: README.md. */
+.room-kitchen {
+  background: #d0c4b5 url("assets/kitchen-main.webp") center / cover no-repeat;
+}
+.room-bathroom {
+  background: #bdc8c0 url("assets/bathroom-main.webp") center / cover no-repeat;
+}
+.room-kitchen::before, .room-bathroom::before {
+  background: linear-gradient(180deg, rgba(10,23,17,0) 15%, rgba(10,23,17,.16) 38%, rgba(10,23,17,.88) 100%);
+  opacity: 1;
+}
+.room-kitchen .room-label, .room-bathroom .room-label,
+.room-kitchen .room-copy, .room-bathroom .room-copy {
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(0,0,0,.55);
+}
+.project-visual-kitchen {
+  background: #d0c4b5 url("assets/kitchen-detail.webp") center / cover no-repeat;
+}
+.project-visual-bath {
+  background: #bdc8c0 url("assets/bathroom-main.webp") center / cover no-repeat;
+}
+.project-visual-process {
+  background: #d0c4b5 url("assets/kitchen-main.webp") center / cover no-repeat;
+}
+.project-visual-kitchen::before, .project-visual-kitchen::after,
+.project-visual-bath::before, .project-visual-bath::after,
+.project-visual-process::before, .project-visual-process::after {
+  background: none;
+}
+@media (max-width:640px) {
+  .room-kitchen { background-position: center; }
+  .room-bathroom { background-position: center; }
+}

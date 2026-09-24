@@ -40,9 +40,30 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
 
 const quoteForm = document.getElementById('quoteForm');
 const formStatus = document.getElementById('formStatus');
+
 if (quoteForm && formStatus) {
-  quoteForm.addEventListener('submit', (event) => {
+  quoteForm.addEventListener('submit', event => {
     event.preventDefault();
-    formStatus.textContent = 'Demo only — connect this form to email or a backend when you want the full website.';
+    if (!quoteForm.reportValidity()) return;
+    const fields = new FormData(quoteForm);
+    const name = String(fields.get('name') || '').trim();
+    const phone = String(fields.get('phone') || '').trim();
+    const email = String(fields.get('email') || '').trim();
+    const project = String(fields.get('project') || '').trim();
+    const message = String(fields.get('message') || '').trim();
+    const subject = 'Kitchen / bathroom enquiry — ' + project;
+    const body = [
+      'Name: ' + name,
+      'Phone: ' + phone,
+      'Email: ' + email,
+      'Project: ' + project,
+      '',
+      'Project details:',
+      message || '(not provided)'
+    ].join('\\n');
+    const url = 'mailto:polbudandson@gmail.com?subject='
+      + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    formStatus.textContent = 'Your email app should open with a draft. Please review and send it to contact the business. If nothing opens, use the email link above.';
+    window.location.href = url;
   });
 }

@@ -1,358 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Polbudandsonltd | Kitchen & Bathroom Installation</title>
-  <meta name="description" content="Kitchen and bathroom installation and material advice in Middleton, Manchester. Contact Polbudandsonltd to discuss your project." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17251f">
+  <meta name="description" content="Polbudandsonltd — family-owned kitchen and bathroom installation in Middleton, Manchester. Explore the services and get in touch about your home.">
+  <title>Polbudandsonltd — Kitchens & Bathrooms, thoughtfully fitted</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/kitchen-main.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page-shell"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a href="#top" class="brand" aria-label="Polbudandsonltd home">
-        <span class="brand-kicker">Middleton, Manchester</span>
-        <span class="brand-name">Polbudandsonltd</span>
+    <div class="header-inner container">
+      <a class="wordmark" href="#top" aria-label="Polbudandsonltd, back to top">
+        <span class="brand-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-type"><strong>POLBUD<span class="brand-amp">&</span>SON</strong><small>Kitchen & bathroom installation</small></span>
       </a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="siteNav">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="site-nav" id="siteNav">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Our approach</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="nav-cta">Get a Quote</a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#about">The company</a>
+        <a href="#services">What we do</a>
+        <a href="#inspiration">Inspiration</a>
+        <a href="#process">How it works</a>
       </nav>
+      <a class="header-contact" href="#contact">Discuss a project <span aria-hidden="true">↗</span></a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="mobileNav" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
     </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" inert>
+      <a href="#about"><span>01</span>The company</a>
+      <a href="#services"><span>02</span>What we do</a>
+      <a href="#inspiration"><span>03</span>Inspiration</a>
+      <a href="#process"><span>04</span>How it works</a>
+      <a class="mobile-nav-contact" href="#contact">Discuss a project <span aria-hidden="true">↗</span></a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero section">
-      <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <span class="eyebrow">Kitchen & Bathroom Installation</span>
-          <h1>Made for living.<br><em>Built to last.</em></h1>
-          <p class="hero-text">
-            From the everyday kitchen to a bathroom that feels like your own, Polbudandsonltd brings over 20 years of experience to kitchen and bathroom installation. Based in Middleton, Manchester.
-          </p>
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-container container">
+        <div class="hero-copy">
+          <div class="eyebrow hero-eyebrow"><span class="eyebrow-dash"></span> Independent family business <span class="eyebrow-place">/ Middleton, Manchester</span></div>
+          <h1 id="heroTitle"><span class="hero-line">Good spaces.</span><span class="hero-line"><em>Better days.</em></span></h1>
+          <p class="hero-lead">The kitchen you gather in. The bathroom you begin each day in. Thoughtful installation for the rooms that make a house feel like home.</p>
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Request a Quote</a>
-            <a href="#services" class="btn btn-secondary">Explore services</a>
+            <a class="button button-dark" href="#contact"><span>Let's talk about your space</span><span class="button-arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#services">Explore our services <span aria-hidden="true">↓</span></a>
           </div>
-          <ul class="hero-highlights">
-            <li>20+ years of experience</li>
-            <li>Family-owned</li>
-            <li>Kitchen & bathroom specialists</li>
-          </ul>
+          <div class="hero-footnote"><strong>20+ <span>years</span></strong><span>of experience in kitchen<br>and bathroom installation*</span></div>
         </div>
+        <div class="hero-visual">
+          <figure class="hero-image-frame">
+            <img src="assets/kitchen-main.webp" alt="Illustrative modern kitchen interior with neutral finishes" width="960" height="653" fetchpriority="high">
+            <span class="hero-image-corner" aria-hidden="true"></span>
+            <figcaption class="photo-tag">01 / A space to come home to <span>Illustrative image</span></figcaption>
+          </figure>
+          <div class="hero-side-note" aria-hidden="true">SPACE <span>—</span> DETAIL <span>—</span> FINISH</div>
+        </div>
+      </div>
+      <div class="hero-bottom container"><span>Kitchen installation &nbsp; / &nbsp; Bathroom installation &nbsp; / &nbsp; Material advice</span><a href="#about" aria-label="Discover our approach">Scroll to discover <span aria-hidden="true">↓</span></a></div>
+    </section>
 
-        <div class="hero-visual reveal reveal-delay-1" aria-hidden="true">
-          <div class="visual-panel panel-main">
-            <div class="panel-badge">Illustrative interior photography</div>
-            <div class="room-card room-kitchen">
-              <span class="room-label">Kitchen Installation</span>
-              <span class="room-copy">Clean layouts, fitted finishes, purposeful detail.</span>
-            </div>
-            <div class="room-card room-bathroom">
-              <span class="room-label">Bathroom Installation</span>
-              <span class="room-copy">Practical comfort, durable materials, polished results.</span>
-            </div>
-          </div>
-          <div class="stats-card">
-            <span class="stats-kicker">Based in</span>
-            <strong>Middleton, Manchester</strong>
-            <span>Material advice + end-to-end installation</span>
+    <div class="service-ribbon" aria-label="Kitchen and bathroom installation, material guidance">
+      <div class="service-ribbon-inner">
+        <span>SPACES FOR EVERYDAY LIFE</span><b aria-hidden="true">✳</b><span>KITCHENS</span><b aria-hidden="true">✳</b><span>BATHROOMS</span><b aria-hidden="true">✳</b><span>MATERIAL GUIDANCE</span><b aria-hidden="true">✳</b><span>SPACES FOR EVERYDAY LIFE</span><b aria-hidden="true">✳</b><span>KITCHENS</span><b aria-hidden="true">✳</b>
+      </div>
+    </div>
+
+    <section class="intro section-pad" id="about" aria-labelledby="aboutTitle">
+      <div class="container intro-grid">
+        <div class="section-index" data-reveal><span class="index-rule"></span>01 / THE COMPANY</div>
+        <div class="intro-content" data-reveal>
+          <h2 id="aboutTitle">Every detail is part of <em>the bigger picture.</em></h2>
+          <div class="intro-bottom">
+            <p>Polbudandsonltd is a family-owned business based in Middleton, Manchester. With over 20 years of experience in kitchen and bathroom installation, the team also offers advice on purchasing materials and end-to-end fitting.</p>
+            <a class="underlined-link" href="#process">See how a project begins <span aria-hidden="true">↗</span></a>
           </div>
         </div>
+      </div>
+      <div class="container intro-image-wrap" data-reveal>
+        <div class="intro-image"><img src="assets/kitchen-detail.webp" alt="Illustrative warm-toned contemporary kitchen interior" width="960" height="640" loading="lazy"></div>
+        <div class="intro-image-caption"><span>THE LITTLE THINGS MATTER.</span><span>Reference photograph — not a business project.</span></div>
       </div>
     </section>
 
-    <section class="trust-strip section-sm">
-      <div class="container trust-grid reveal">
-        <div>
-          <span class="mini-label">Business focus</span>
-          <p>Bathrooms · Kitchens · Home renovation detail</p>
-        </div>
-        <div>
-          <span class="mini-label">Approach</span>
-          <p>Measured planning, clean fitting, dependable workmanship</p>
-        </div>
-        <div>
-          <span class="mini-label">Consultation</span>
-          <p>Guidance on materials and installation planning</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container split-grid">
-        <div class="section-intro reveal">
-          <span class="eyebrow">A local family business</span>
-          <h2>Built on experience, designed for everyday living.</h2>
-        </div>
-        <div class="about-copy reveal reveal-delay-1">
-          <p>
-            Polbudandsonltd is a family-owned business with over 20 years of experience in kitchen and bathroom installation. Its services include advice on material purchases and end-to-end installation.
-          </p>
-          <p>
-            Every home is different. Start with a conversation about the space, the materials and the result you have in mind.
-          </p>
-        </div>
-      </div>
-
-      <div class="container feature-grid">
-        <article class="feature-card reveal">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19h16M6 16V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8M9 12h6M10 8h4"/></svg>
-          </div>
-          <h3>Kitchen installations</h3>
-          <p>Functional, hard-working spaces shaped around storage, movement and finish quality.</p>
-        </article>
-        <article class="feature-card reveal reveal-delay-1">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 20V8a5 5 0 1 1 10 0v12M7 14h10M10 3h4"/></svg>
-          </div>
-          <h3>Bathroom installations</h3>
-          <p>Comfortable, practical and durable bathroom fitting with a refined final result.</p>
-        </article>
-        <article class="feature-card reveal reveal-delay-2">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18l5-5 4 4 7-7M16 10h4v4"/></svg>
-          </div>
-          <h3>Material guidance</h3>
-          <p>Support with purchasing decisions so materials and installation work together properly.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="services">
+    <section class="services section-pad" id="services" aria-labelledby="servicesTitle">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Services</span>
-          <h2>Your project, from first ideas to final fittings.</h2>
-          <p>
-            Kitchen or bathroom, good installation begins with the right plan and the right materials.
-          </p>
-        </div>
-
-        <div class="services-grid">
-          <article class="service-card reveal">
-            <span class="service-number">01</span>
-            <h3>Complete kitchen fitting</h3>
-            <p>Discuss your layout, fitting requirements and material choices before installation begins.</p>
-            <ul>
-              <li>Kitchen fitting</li>
-              <li>Material guidance</li>
-              <li>End-to-end installation</li>
-            </ul>
-          </article>
-          <article class="service-card reveal reveal-delay-1">
-            <span class="service-number">02</span>
-            <h3>Bathroom installation</h3>
-            <p>Discuss the bathroom you want, the materials you prefer and the installation involved.</p>
-            <ul>
-              <li>Bathroom fitting</li>
-              <li>Material guidance</li>
-              <li>End-to-end installation</li>
-            </ul>
-          </article>
-          <article class="service-card reveal reveal-delay-2">
-            <span class="service-number">03</span>
-            <h3>Materials & planning advice</h3>
-            <p>Get advice about purchasing materials for your kitchen or bathroom installation.</p>
-            <ul>
-              <li>Discuss your requirements</li>
-              <li>Consider suitable materials</li>
-              <li>Plan ahead for installation</li>
-            </ul>
-          </article>
+        <div class="section-top" data-reveal><span class="section-index"><span class="index-rule"></span>02 / WHAT WE DO</span><p>THE ROOMS YOU LIVE IN,<br>THOUGHTFULLY FITTED.</p></div>
+        <div class="services-heading" data-reveal><h2 id="servicesTitle">Built around <em>your everyday.</em></h2><p>Whether you have a clear vision or are just getting started, begin with a conversation about the space you want to make.</p></div>
+        <div class="service-list">
+          <a class="service-row" href="#contact" data-reveal><span class="service-id">01</span><span class="service-row-main"><strong>Kitchen installation</strong><span>Layouts, materials and end-to-end fitting for the heart of the home.</span></span><span class="service-row-arrow" aria-hidden="true">↗</span></a>
+          <a class="service-row" href="#contact" data-reveal><span class="service-id">02</span><span class="service-row-main"><strong>Bathroom installation</strong><span>Practical, comfortable spaces shaped around your requirements.</span></span><span class="service-row-arrow" aria-hidden="true">↗</span></a>
+          <a class="service-row" href="#contact" data-reveal><span class="service-id">03</span><span class="service-row-main"><strong>Material guidance</strong><span>Advice on purchasing materials before your installation begins.</span></span><span class="service-row-arrow" aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">What matters in every space</span>
-          <h2>The details make the difference.</h2>
-          <p>
-            Planning, material choices and thoughtful installation all play a part in creating a space that works for everyday life.
-          </p>
-          <p class="image-disclaimer">Reference photographs only — these images do not show Polbudandsonltd's completed projects.</p>
+    <section class="inspiration section-pad" id="inspiration" aria-labelledby="inspirationTitle">
+      <div class="container inspiration-grid">
+        <div class="inspiration-copy" data-reveal>
+          <span class="section-index"><span class="index-rule"></span>03 / DESIGN INSPIRATION</span>
+          <h2 id="inspirationTitle">Imagine what <em>home</em> could feel like.</h2>
+          <p>Explore two kinds of space. These photographs are visual references, not photographs of Polbudandsonltd's completed work.</p>
+          <div class="space-switcher" role="group" aria-label="Choose an interior reference">
+            <button type="button" class="space-tab is-active" data-space="kitchen" aria-pressed="true"><span>01</span> Kitchen <span aria-hidden="true">↗</span></button>
+            <button type="button" class="space-tab" data-space="bathroom" aria-pressed="false"><span>02</span> Bathroom <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="space-description" id="spaceDescription" aria-live="polite">A kitchen is more than a place to cook. Think about movement, storage and how you want to use the space each day.</div>
+          <a class="underlined-link" href="#contact">Start planning your space <span aria-hidden="true">↗</span></a>
         </div>
-
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-visual project-visual-kitchen"></div>
-            <div class="project-content">
-              <span class="project-type">Design considerations</span>
-              <h3>Make room for everyday life</h3>
-              <p>Think about your cooking routines, storage, surfaces and how the space needs to flow.</p>
-            </div>
-          </article>
-          <article class="project-card reveal reveal-delay-1">
-            <div class="project-visual project-visual-bath"></div>
-            <div class="project-content">
-              <span class="project-type">Design considerations</span>
-              <h3>Comfort in the details</h3>
-              <p>Consider practical layouts, easy-to-maintain finishes and the atmosphere you want at home.</p>
-            </div>
-          </article>
-          <article class="project-card reveal reveal-delay-2">
-            <div class="project-visual project-visual-process"></div>
-            <div class="project-content">
-              <span class="project-type">Your first step</span>
-              <h3>Start with a conversation</h3>
-              <p>Share your ideas and requirements to discuss the next steps for your installation.</p>
-            </div>
-          </article>
-        </div>
+        <figure class="inspiration-photo" data-reveal>
+          <div class="inspiration-photo-window"><img id="spacePhoto" src="assets/kitchen-detail.webp" alt="Illustrative kitchen interior with warm neutral details" width="960" height="640" loading="lazy"><span class="image-index" id="spaceNumber">01 / 02</span></div>
+          <figcaption id="spaceCaption">KITCHEN / DESIGN REFERENCE <span>ILLUSTRATIVE PHOTO</span></figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="section section-dark" id="process">
+    <section class="process section-pad" id="process" aria-labelledby="processTitle">
       <div class="container">
-        <div class="section-head reveal light">
-          <span class="eyebrow">Process</span>
-          <h2>Simple, direct and homeowner-friendly.</h2>
-          <p>
-            An initial conversation is the place to explain your ideas, discuss materials and plan the installation.
-          </p>
-        </div>
-
+        <div class="section-top" data-reveal><span class="section-index"><span class="index-rule"></span>04 / THE NEXT STEP</span><p>YOUR HOME. YOUR IDEAS.<br>ONE CONVERSATION TO START.</p></div>
+        <h2 id="processTitle" data-reveal>From an idea <em>to a plan.</em></h2>
         <div class="process-grid">
-          <article class="process-card reveal">
-            <span class="process-step">01</span>
-            <h3>Initial contact</h3>
-            <p>Homeowners can call or email to discuss the space, priorities and installation needs.</p>
-          </article>
-          <article class="process-card reveal reveal-delay-1">
-            <span class="process-step">02</span>
-            <h3>Advice & planning</h3>
-            <p>The business profile indicates support with materials, helping customers make more confident decisions.</p>
-          </article>
-          <article class="process-card reveal reveal-delay-2">
-            <span class="process-step">03</span>
-            <h3>Installation</h3>
-            <p>The service positioning focuses on end-to-end fitting for kitchens and bathrooms.</p>
-          </article>
-          <article class="process-card reveal reveal-delay-3">
-            <span class="process-step">04</span>
-            <h3>Finished result</h3>
-            <p>Talk through your project and the result you hope to achieve.</p>
-          </article>
+          <div class="process-step" data-reveal><span class="process-no">01 /</span><h3>Tell us your idea.</h3><p>Get in touch and describe the room, your priorities and the work you're considering.</p></div>
+          <div class="process-step" data-reveal><span class="process-no">02 /</span><h3>Talk through the details.</h3><p>Discuss installation requirements and material-purchasing decisions with the business.</p></div>
+          <div class="process-step" data-reveal><span class="process-no">03 /</span><h3>Plan what comes next.</h3><p>Speak directly with the team about the next steps for your kitchen or bathroom.</p></div>
         </div>
+        <p class="process-note">Every project is different. Contact the business to confirm availability, scope, pricing and timescales.</p>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="contact section-pad" id="contact" aria-labelledby="contactTitle">
       <div class="container contact-grid">
-        <div class="contact-copy reveal">
-          <span class="eyebrow">Contact</span>
-          <h2>Ready to discuss your kitchen or bathroom installation?</h2>
-          <p>
-            Tell us about the space you have in mind. Reach out by phone or email to start the conversation.
-          </p>
-
-          <div class="contact-cards">
-            <div class="contact-card">
-              <span class="contact-label">Phone</span>
-              <a href="tel:+447872395453">+44 7872 395453</a>
-            </div>
-            <div class="contact-card">
-              <span class="contact-label">Email</span>
-              <a href="mailto:polbudandson@gmail.com">polbudandson@gmail.com</a>
-            </div>
-            <div class="contact-card">
-              <span class="contact-label">Address</span>
-              <p>7 Boardman Fold Rd, Middleton, Manchester M24 1QD, United Kingdom</p>
-            </div>
-            <div class="contact-card">
-              <span class="contact-label">Hours</span>
-              <p>Mon–Thu 6:30 AM – 6:00 PM · Fri 6:30 AM – 4:00 PM · Sat 6:30 AM – 2:00 PM · Sun Closed</p>
-            </div>
+        <div class="contact-copy" data-reveal>
+          <span class="section-index"><span class="index-rule"></span>05 / GET IN TOUCH</span>
+          <h2 id="contactTitle">Let's make room for <em>what's next.</em></h2>
+          <p>Have a kitchen or bathroom in mind? Start with a phone call or send the team your project details by email.</p>
+          <div class="contact-direct">
+            <a href="tel:+447872395453" class="contact-detail"><small>CALL THE TEAM</small><strong>+44 7872 395453</strong><span aria-hidden="true">↗</span></a>
+            <a href="mailto:polbudandson@gmail.com" class="contact-detail"><small>EMAIL THE TEAM</small><strong>polbudandson@gmail.com</strong><span aria-hidden="true">↗</span></a>
           </div>
+          <p class="address">Based at 7 Boardman Fold Road, Middleton, Manchester M24 1QD, UK.</p>
         </div>
-
-        <div class="contact-form-wrap reveal reveal-delay-1">
-          <form class="contact-form" id="quoteForm">
-            <div class="form-top">
-              <span class="form-kicker">Quote request</span>
-              <p>Email enquiry</p>
-            </div>
-            <div class="form-grid">
-              <label>
-                <span>Name</span>
-                <input type="text" name="name" placeholder="Your full name" required>
-              </label>
-              <label>
-                <span>Phone</span>
-                <input type="tel" name="phone" placeholder="Your phone number" required>
-              </label>
-              <label class="full">
-                <span>Email</span>
-                <input type="email" name="email" placeholder="Your email address" required>
-              </label>
-              <label class="full">
-                <span>Project type</span>
-                <select name="project" required>
-                  <option value="">Select a project</option>
-                  <option>Kitchen installation</option>
-                  <option>Bathroom installation</option>
-                  <option>Materials advice</option>
-                  <option>General enquiry</option>
-                </select>
-              </label>
-              <label class="full">
-                <span>Project details</span>
-                <textarea name="message" rows="5" placeholder="Tell us a little about your space and what you need."></textarea>
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Prepare Email Enquiry</button>
-            <p class="form-note">Opens an email draft in your email app. No information is sent until you review and send it yourself.</p>
-            <p class="form-status" id="formStatus" aria-live="polite"></p>
-          </form>
-        </div>
+        <form class="enquiry-form" id="enquiryForm" data-reveal>
+          <div class="form-heading"><span>YOUR PROJECT / 01</span><h3>Tell us a little<br><em>about your space.</em></h3></div>
+          <label for="yourName">Your name <span aria-hidden="true">*</span></label>
+          <input id="yourName" name="name" autocomplete="name" required maxlength="100" placeholder="Your name">
+          <div class="field-pair">
+            <div><label for="yourEmail">Email address <span aria-hidden="true">*</span></label><input id="yourEmail" type="email" name="email" autocomplete="email" required maxlength="254" placeholder="you@example.com"></div>
+            <div><label for="yourPhone">Phone number</label><input id="yourPhone" name="phone" autocomplete="tel" type="tel" maxlength="40" placeholder="Optional"></div>
+          </div>
+          <label for="projectType">What are you planning? <span aria-hidden="true">*</span></label>
+          <select id="projectType" name="project" required><option value="">Choose a service</option><option>Kitchen installation</option><option>Bathroom installation</option><option>Material advice</option><option>Something else</option></select>
+          <label for="projectMessage">Your project details <span aria-hidden="true">*</span></label>
+          <textarea id="projectMessage" name="message" required maxlength="2000" rows="4" placeholder="Tell us about your room, ideas and priorities…"></textarea>
+          <button type="submit" class="button button-light"><span>Prepare email enquiry</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          <p class="form-note">This frontend form opens an email draft in your email app. Nothing is sent or stored here; review the draft and send it yourself.</p>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <span class="brand-kicker">Kitchen & Bathroom Installation</span>
-        <h3>Polbudandsonltd</h3>
-        <p>Kitchen and bathroom installation with material-purchasing advice, based in Middleton, Manchester.</p>
-      </div>
-      <div>
-        <span class="footer-title">Quick Links</span>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Our Approach</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <span class="footer-title">Business Info</span>
-        <ul>
-          <li><a href="tel:+447872395453">+44 7872 395453</a></li>
-          <li><a href="mailto:polbudandson@gmail.com">polbudandson@gmail.com</a></li>
-          <li>Middleton, Manchester</li>
-        </ul>
-      </div>
-    </div>
+    <div class="container footer-main"><a class="footer-wordmark" href="#top">POLBUD<span>&</span>SON</a><a class="footer-up" href="#top">Back to the top ↑</a></div>
+    <div class="container footer-bottom"><span>Polbudandsonltd · Middleton, Manchester</span><span>Independent, unofficial website concept. Interior photographs are illustrative, not the company's completed projects.</span></div>
   </footer>
-
-  <script src="script.js"></script>
+  <a class="mobile-contact-cta" id="mobileContactCta" href="#contact">Discuss a project <span aria-hidden="true">↗</span></a>
 </body>
 </html>

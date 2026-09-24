@@ -99,3 +99,14 @@ body{font-size:16px;line-height:1.65;color:var(--text);background:var(--bg);-web
 @media(max-width:860px){.site-nav{background:#fbf9f4;inset:88px 16px auto 16px;border-radius:5px}.site-nav .nav-cta{text-align:center;padding:14px}.site-nav a{font-size:1rem;padding:5px 2px}.trust-grid{grid-template-columns:1fr;gap:14px;padding:22px 0}.trust-grid>div:not(:last-child){border-right:0;border-bottom:1px solid var(--line);padding:0 0 14px}.feature-grid{grid-template-columns:1fr}.feature-card,.feature-card:not(:last-child){border-right:0;margin-right:0;padding:25px 0;border-bottom:1px solid var(--line)}.feature-card:last-child{border-bottom:0}.process-card:not(:last-child){margin-right:0;border-right:0;border-bottom:1px solid #ffffff37}.process-card{min-height:auto}.contact-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){:root{--section:clamp(3.7rem,14vw,5rem)}.container{width:calc(100% - 36px)}.nav-wrap{min-height:74px;gap:10px}.site-nav{inset:74px 10px auto 10px}.brand-name{font-size:1.05rem}.brand-kicker{font-size:.54rem;letter-spacing:.08em}.hero{padding:3.15rem 0 3.4rem}.hero-copy{padding:0}.hero-copy h1{font-size:clamp(2.9rem,13vw,4.4rem);line-height:1.04;max-width:13ch;margin:17px 0 18px}.hero-text{font-size:.98rem;line-height:1.75}.section-intro h2,.section-head h2,.contact-copy h2{font-size:clamp(2.35rem,10.3vw,3.4rem)}.hero-actions{flex-direction:column}.hero-highlights{flex-direction:row;align-items:flex-start;gap:11px}.hero-highlights li{font-size:.73rem;border:0;padding:0;margin:0}.visual-panel{min-height:410px;padding:16px}.room-kitchen{inset:84px 16px 150px 16px}.room-bathroom{left:auto;right:10px;bottom:10px;width:65%;min-height:170px}.room-card{padding:15px}.room-label{font-size:1.35rem}.room-copy{font-size:.69rem}.stats-card{position:relative;left:0;bottom:auto;width:100%;margin-top:12px}.services-grid,.projects-grid{grid-template-columns:1fr}.contact-cards{grid-template-columns:1fr}.contact-card{padding:18px}.contact-form{padding:22px}.footer-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+
+/* Readable small text on phones and desktop */
+.brand-kicker{font-size:.68rem}
+.eyebrow,.mini-label,.project-type,.contact-label,.form-kicker,.footer-title,.stats-kicker,.panel-badge,.service-number,.process-step{font-size:.75rem}
+.form-note,.form-top p{font-size:.81rem;line-height:1.65}
+@media(max-width:560px){
+ .brand-kicker{font-size:.65rem}
+ .hero-highlights li{font-size:.82rem}
+ .room-copy{font-size:.82rem;line-height:1.5}
+}

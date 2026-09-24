@@ -60,7 +60,7 @@ if (quoteForm && formStatus) {
       '',
       'Project details:',
       message || '(not provided)'
-    ].join('\\n');
+    ].join('\n');
     const url = 'mailto:polbudandson@gmail.com?subject='
       + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     formStatus.textContent = 'Your email app should open with a draft. Please review and send it to contact the business. If nothing opens, use the email link above.';

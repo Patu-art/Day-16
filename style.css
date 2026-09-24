@@ -110,3 +110,153 @@ body{font-size:16px;line-height:1.65;color:var(--text);background:var(--bg);-web
  .hero-highlights li{font-size:.82rem}
  .room-copy{font-size:.82rem;line-height:1.5}
 }
+
+
+/* SITEPRO responsive QA patch — 24 September 2026.
+   These overrides are deliberately placed after the original responsive rules. */
+
+/* Prevent grid contents and the long business name from creating sideways scrolling. */
+.hero-grid > *, .split-grid > *, .contact-grid > *,
+.feature-grid > *, .services-grid > *, .projects-grid > *,
+.process-grid > *, .footer-grid > *, .form-grid > *, .trust-grid > * {
+  min-width: 0;
+}
+.brand, .brand-name { min-width: 0; }
+.contact-card a, .contact-card p, .site-footer li, .site-footer p {
+  overflow-wrap: anywhere;
+}
+
+/* Compact laptop and tablet: six desktop navigation links do not fit at 861px. */
+@media (max-width: 1024px) {
+  .nav-wrap { min-height: 78px; }
+  .menu-toggle { display: inline-block; flex: 0 0 50px; }
+  .site-nav {
+    position: absolute;
+    inset: auto 16px auto 16px;
+    top: calc(100% + 8px);
+    display: grid;
+    gap: 5px;
+    width: auto;
+    max-height: calc(100dvh - 100px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #fbf9f4;
+    box-shadow: 0 18px 42px rgba(30, 41, 33, .14);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 180ms ease, transform 180ms ease, visibility 180ms;
+    z-index: 40;
+  }
+  .site-nav.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .site-nav a { display: block; padding: 10px 12px; font-size: .96rem; line-height: 1.45; }
+  .site-nav .nav-cta { display: block; padding: 12px 14px; text-align: center; }
+  .hero-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-copy { padding: 0; }
+  .hero-copy h1 { max-width: 14ch; }
+  .hero-visual { width: min(100%, 680px); }
+  .visual-panel { min-height: 500px; }
+  .contact-copy h2 { max-width: 18ch; }
+  .contact-form-wrap { width: 100%; }
+  .form-grid > label { min-width: 0; }
+}
+
+/* Tablet: consistent card flow without orphan cards, and no oversized hero art. */
+@media (max-width: 860px) {
+  .site-nav { inset: auto 16px auto 16px; top: calc(100% + 8px); }
+  .feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
+  .feature-card, .feature-card:not(:last-child) {
+    margin: 0; padding: 26px 0; border: 0; border-bottom: 1px solid var(--line);
+  }
+  .feature-card:last-child { grid-column: 1 / -1; border-bottom: 0; }
+  .services-grid, .projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-grid > :last-child:nth-child(odd),
+  .projects-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-card, .process-card:not(:last-child) {
+    margin: 0; padding: 24px 12px 24px 0;
+    border: 0; border-bottom: 1px solid rgba(255,255,255,.22);
+  }
+  .process-card:nth-child(even) { padding-left: 12px; }
+  .process-card:nth-last-child(-n+2) { border-bottom: 0; }
+  .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Small tablets and large phones: stop squeezing text and cards into 2 columns. */
+@media (max-width: 640px) {
+  .container { width: calc(100% - 36px); }
+  .feature-grid, .services-grid, .projects-grid, .process-grid,
+  .contact-cards, .footer-grid, .form-grid { grid-template-columns: minmax(0, 1fr); }
+  .feature-card:last-child,
+  .services-grid > :last-child:nth-child(odd),
+  .projects-grid > :last-child:nth-child(odd) { grid-column: auto; }
+  .feature-card:last-child { border-bottom: 0; }
+  .process-card, .process-card:not(:last-child), .process-card:nth-child(even) {
+    padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,.22);
+  }
+  .process-card:last-child { border-bottom: 0; }
+  .form-grid label.full { grid-column: 1; }
+  .form-top { flex-wrap: wrap; gap: 6px; }
+  .hero-copy h1 { font-size: clamp(2.65rem, 10.7vw, 4.5rem); max-width: 100%; }
+  .section-intro h2, .section-head h2, .contact-copy h2 {
+    max-width: 100%; font-size: clamp(2.15rem, 8.6vw, 3.4rem);
+    overflow-wrap: break-word;
+  }
+  /* The layered artwork collided on narrow phones; make each panel readable. */
+  .hero-visual { width: 100%; }
+  .visual-panel {
+    display: grid; grid-template-columns: minmax(0,1fr); gap: 12px;
+    padding: 16px; min-height: 0; overflow: visible;
+  }
+  .panel-badge { justify-self: start; }
+  .room-card, .room-kitchen, .room-bathroom {
+    position: relative; inset: auto; left: auto; right: auto; bottom: auto;
+    width: 100%; min-width: 0; height: auto; border-radius: 3px;
+    padding: 20px; box-shadow: none;
+  }
+  .room-kitchen { min-height: 215px; }
+  .room-bathroom { min-height: 175px; }
+  .room-label { font-size: 1.45rem; }
+  .room-copy { max-width: 31ch; font-size: .85rem; }
+  .stats-card {
+    position: static; inset: auto; width: 100%; margin-top: 12px;
+    border: 1px solid var(--line); box-shadow: none;
+  }
+  .hero-actions { display: grid; grid-template-columns: minmax(0,1fr); }
+  .hero-actions .btn { width: 100%; }
+  .hero-highlights { flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 7px 14px; }
+  .hero-highlights li { border: 0; margin: 0; padding: 0; line-height: 1.5; }
+  .contact-form { padding: 22px; }
+  .form-grid input, .form-grid select, .form-grid textarea { min-width: 0; width: 100%; }
+}
+
+/* Narrow mobile devices: leave usable breathing room around logo, CTA and body copy. */
+@media (max-width: 380px) {
+  .container { width: calc(100% - 28px); }
+  .nav-wrap { min-height: 72px; }
+  .brand-name { font-size: .93rem; letter-spacing: -.06em; }
+  .brand-kicker { font-size: .60rem; }
+  .menu-toggle { width: 44px; height: 44px; flex-basis: 44px; }
+  .menu-toggle span { left: 11px; right: 11px; }
+  .menu-toggle span:nth-child(1) { top: 14px; }
+  .menu-toggle span:nth-child(2) { top: 21px; }
+  .menu-toggle span:nth-child(3) { top: 28px; }
+  .menu-toggle.active span:nth-child(1), .menu-toggle.active span:nth-child(3) { top: 21px; }
+  .hero-copy h1 { font-size: clamp(2.4rem, 11.2vw, 2.8rem); }
+  .section-intro h2, .section-head h2, .contact-copy h2 { font-size: clamp(2rem, 9.6vw, 2.3rem); }
+  .hero-highlights li { font-size: .78rem; }
+  .contact-form, .service-card, .project-content { padding: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-nav { transition: none; }
+}
